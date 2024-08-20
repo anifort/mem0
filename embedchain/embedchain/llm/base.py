@@ -5,14 +5,11 @@ from typing import Any, Optional
 
 from langchain.schema import BaseMessage as LCBaseMessage
 
-from embedchain.constants import SQLITE_PATH
 from embedchain.config import BaseLlmConfig
 from embedchain.config.llm.base import (
-    DEFAULT_PROMPT,
-    DEFAULT_PROMPT_WITH_HISTORY_TEMPLATE,
-    DEFAULT_PROMPT_WITH_MEM0_MEMORY_TEMPLATE,
-    DOCS_SITE_PROMPT_TEMPLATE,
-)
+    DEFAULT_PROMPT, DEFAULT_PROMPT_WITH_HISTORY_TEMPLATE,
+    DEFAULT_PROMPT_WITH_MEM0_MEMORY_TEMPLATE, DOCS_SITE_PROMPT_TEMPLATE)
+from embedchain.constants import SQLITE_PATH
 from embedchain.core.db.database import init_db, setup_engine
 from embedchain.helpers.json_serializable import JSONSerializable
 from embedchain.memory.base import ChatHistory
